@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For My Love ❤️</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #ffc1e3, #ffb3c6, #ffd6e8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .page {
+      display: none;
+      background: rgba(255,255,255,0.95);
+      padding: 30px;
+      border-radius: 25px;
+      text-align: center;
+      max-width: 500px;
+      width: 90%;
+      box-shadow: 0 20px 40px rgba(255, 105, 180, 0.25);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {opacity:0; transform: translateY(20px);}
+      to {opacity:1; transform: translateY(0);}
+    }
+
+    h1 {
+      color: #ff1a6b;
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    p {
+      color: #b8005f;
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    .highlight {
+      color: #ff3f91;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 30px;
+      border: 1px solid #ffb3c6;
+      margin: 10px 0;
+      font-size: 1rem;
+    }
+
+    button {
+      margin-top: 20px;
+      background: #ff4d6d;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 35px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    button:hover {
+      background: #e63950;
+      transform: translateY(-2px);
+    }
+
+    #error {
+      color: red;
+      margin-top: 10px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page 1: Login -->
+  <div id="page1" class="page" style="display:block;">
+    <h1>Private Access 🔒</h1>
+    <p>Please login to continue 💗</p>
+    <input id="username" type="text" placeholder="Username">
+    <input id="password" type="password" placeholder="Password">
+    <button onclick="login()">Login 💕</button>
+    <p id="error">Wrong username or password 😢</p>
+  </div>
+
+  <!-- Page 2: Simple message + button -->
+  <div id="page2" class="page">
+    <h1>Hi Sweetheart 💖</h1>
+    <p>Click the button below to see a surprise 😘</p>
+    <button onclick="goToPage3()">Open Your Love Message 💌</button>
+  </div>
+
+  <!-- Page 3: Full sweet message -->
+  <div id="page3" class="page">
+    <h1>For My Beloved Redina Florenzaa 💕</h1>
+    <p>
+      Every moment with you is a dream come true.<br>
+      Your smile brightens my world and your laughter is my favorite melody.<br>
+      <span class="highlight">you always my katakkk &lt;3</span> 🌸
+    </p>
+    <p>
+      I promise to love you today, tomorrow, and forever.<br>
+      You are my everything, my love, and my happiness.
+    </p>
+  </div>
+
+  <script>
+    function login() {
+      const user = document.getElementById('username').value;
+      const pass = document.getElementById('password').value;
+
+      if(user === 'Redina Comel' && pass === 'BotakMarley') {
+        document.getElementById('page1').style.display = 'none';
+        document.getElementById('page2').style.display = 'block';
+      } else {
+        document.getElementById('error').style.display = 'block';
+      }
+    }
+
+    function goToPage3() {
+      document.getElementById('page2').style.display = 'none';
+      document.getElementById('page3').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
